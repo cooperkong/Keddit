@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener { view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show() }
     }
 
-    fun changeFragment(f: Fragment, cleanStack: Boolean = false) {
+    fun changeFragment(f: Fragment, cleanStack: Boolean = false) : Unit{
         val ft = supportFragmentManager.beginTransaction();
         if (cleanStack) {
             clearBackStack();
